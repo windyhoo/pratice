@@ -7,10 +7,10 @@ import java.util.Vector;
 
 public class SshTest {
 	public static ISshProvider sshExecutor  = new J2sshProvider();
-	public static String host="123.56.124.173";
+	public static String host="xx";
 	public static Integer port = 22;
-	public static String userName = "root";
-	public static String password = "zhengyuhaoaoe";
+	public static String userName = "xx";
+	public static String password = "xx";
 
 	public static void main(String[] args) {
 		
