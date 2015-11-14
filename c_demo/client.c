@@ -23,8 +23,8 @@ int main()
 /*  Name the socket, as agreed with the server.  */
 
     address.sin_family = AF_INET;
-    address.sin_addr.s_addr = inet_addr("127.0.0.1");
-    address.sin_port = 9734;
+    address.sin_addr.s_addr = inet_addr("123.56.124.173");
+    address.sin_port = 9743;
     len = sizeof(address);
 
 /*  Now connect our socket to the server's socket.  */
