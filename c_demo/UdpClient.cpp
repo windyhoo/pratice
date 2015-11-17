@@ -18,16 +18,20 @@
 #define BUFFER_SIZE 1024
 #define FILE_NAME_MAX_SIZE 512
 
-int main()
+int main(int argc,char** argv)
 {
-	/* ·þÎñ¶ËµØÖ· */
+	if(argc!=2) {
+		printf("args error\n");
+		return -1;
+	}
+	/* ï¿½ï¿½ï¿½ï¿½Ëµï¿½Ö· */
 	struct sockaddr_in server_addr;
 	bzero(&server_addr, sizeof(server_addr));
 	server_addr.sin_family = AF_INET;
-	server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+	server_addr.sin_addr.s_addr = inet_addr(argv[1]);
 	server_addr.sin_port = htons(SERVER_PORT);
 
-	/* ´´½¨socket */
+	/* ï¿½ï¿½ï¿½ï¿½socket */
 	int client_socket_fd = socket(AF_INET, SOCK_DGRAM, 0);
 	if(client_socket_fd < 0)
 	{
@@ -35,7 +39,7 @@ int main()
 		exit(1);
 	}
 
-	/* ÊäÈëÎÄ¼þÃûµ½»º³åÇø */
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	char file_name[FILE_NAME_MAX_SIZE+1];
 	bzero(file_name, FILE_NAME_MAX_SIZE+1);
 	printf("Please Input File Name On Server:\t");
@@ -45,7 +49,7 @@ int main()
 	bzero(buffer, BUFFER_SIZE);
 	strncpy(buffer, file_name, strlen(file_name)>BUFFER_SIZE?BUFFER_SIZE:strlen(file_name));
 
-	/* ·¢ËÍÎÄ¼þÃû */
+	/* ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ */
 	if(sendto(client_socket_fd, buffer, BUFFER_SIZE,0,(struct sockaddr*)&server_addr,sizeof(server_addr)) < 0)
 	{
 		perror("Send File Name Failed:");
