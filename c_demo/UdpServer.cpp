@@ -17,14 +17,14 @@
 int main()
 {
 	printf("main\n");
-	/* ´´½¨UDPÌ×½Ó¿Ú */
+	/* ï¿½ï¿½ï¿½ï¿½UDPï¿½×½Ó¿ï¿½ */
 	struct sockaddr_in server_addr;
 	bzero(&server_addr, sizeof(server_addr));
 	server_addr.sin_family = AF_INET;
 	server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 	server_addr.sin_port = htons(SERVER_PORT);
 
-	/* ´´½¨socket */
+	/* ï¿½ï¿½ï¿½ï¿½socket */
 	int server_socket_fd = socket(AF_INET, SOCK_DGRAM, 0);
 	if(server_socket_fd == -1)
 	{
@@ -32,21 +32,21 @@ int main()
 		exit(1);
 	}
 
-	/* °ó¶¨Ì×½Ó¿Ú */
+	/* ï¿½ï¿½ï¿½×½Ó¿ï¿½ */
 	if(-1 == (bind(server_socket_fd,(struct sockaddr*)&server_addr,sizeof(server_addr))))
 	{
 		perror("Server Bind Failed:");
 		exit(1);
 	}
 
-	/* Êý¾Ý´«Êä */
+	/* ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½ */
 	while(1)
 	{
-	/* ¶¨ÒåÒ»¸öµØÖ·£¬ÓÃÓÚ²¶»ñ¿Í»§¶ËµØÖ· */
+	/* ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½Í»ï¿½ï¿½Ëµï¿½Ö· */
 		struct sockaddr_in client_addr;
 		socklen_t client_addr_length = sizeof(client_addr);
 
-		/* ½ÓÊÕÊý¾Ý */
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 		char buffer[BUFFER_SIZE];
 		bzero(buffer, BUFFER_SIZE);
 		if(recvfrom(server_socket_fd, buffer, BUFFER_SIZE,0,(struct sockaddr*)&client_addr, &client_addr_length) == -1)
@@ -55,7 +55,9 @@ int main()
 			exit(1);
 		}
 
-		/* ´ÓbufferÖÐ¿½±´³öfile_name */
+		printf("port:%d\n",client_addr.sin_port);
+		printf("address:%n",inet_ntoa(client_addr.sin_addr));
+		/* ï¿½ï¿½bufferï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ï¿½file_name */
 		char file_name[FILE_NAME_MAX_SIZE+1];
 		bzero(file_name,FILE_NAME_MAX_SIZE+1);
 		strncpy(file_name, buffer, strlen(buffer)>FILE_NAME_MAX_SIZE?FILE_NAME_MAX_SIZE:strlen(buffer));
