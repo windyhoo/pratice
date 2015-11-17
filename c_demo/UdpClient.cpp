@@ -20,7 +20,7 @@
 
 int main(int argc,char** argv)
 {
-	if(argc!=2) {
+	if(argc!=3) {
 		printf("args error\n");
 		return -1;
 	}
@@ -29,7 +29,7 @@ int main(int argc,char** argv)
 	bzero(&server_addr, sizeof(server_addr));
 	server_addr.sin_family = AF_INET;
 	server_addr.sin_addr.s_addr = inet_addr(argv[1]);
-	server_addr.sin_port = htons(SERVER_PORT);
+	server_addr.sin_port = htons(atoi(argv[2]));
 
 	/* ����socket */
 	int client_socket_fd = socket(AF_INET, SOCK_DGRAM, 0);
