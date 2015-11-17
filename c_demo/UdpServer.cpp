@@ -39,6 +39,21 @@ int main()
 		exit(1);
 	}
 
+	//
+	const char* loginBuffer="login";
+	struct sockaddr_in login_server;
+	bzero(&login_server, sizeof(login_server));
+	login_server.sin_family = AF_INET;
+	login_server.sin_addr.s_addr = inet_addr("123.56.124.173");
+	login_server.sin_port = htons(8000);
+
+	if(sendto(server_socket_fd, loginBuffer, strlen(loginBuffer),0,(struct sockaddr*)&login_server,sizeof(login_server)) < 0)
+	{
+		perror("Send File Name Failed:");
+		exit(1);
+	}
+
+
 	/* ���ݴ��� */
 	while(1)
 	{
@@ -55,7 +70,7 @@ int main()
 			exit(1);
 		}
 
-		printf("port:%d\n",client_addr.sin_port);
+		printf("port:%d\n",ntohs(client_addr.sin_port));
 		printf("address:%s\n",inet_ntoa(client_addr.sin_addr));
 		/* ��buffer�п�����file_name */
 		char file_name[FILE_NAME_MAX_SIZE+1];
