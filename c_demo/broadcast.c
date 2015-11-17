@@ -32,7 +32,7 @@ int main(void)
 
 	/* 开始进行IP多播 */  
 	while(1) {
-		char *msg = "test from broadcast";
+		char *msg = "test from broadcast22";
 		if(sendto(socket_descriptor, msg,strlen(msg), 0,(struct sockaddr *)&address, sizeof(address)) < 0) 
 		{  
 			perror("sendto");  
