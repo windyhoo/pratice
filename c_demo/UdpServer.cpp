@@ -56,7 +56,7 @@ int main()
 		}
 
 		printf("port:%d\n",client_addr.sin_port);
-		printf("address:%n",inet_ntoa(client_addr.sin_addr));
+		printf("address:%s\n",inet_ntoa(client_addr.sin_addr));
 		/* ��buffer�п�����file_name */
 		char file_name[FILE_NAME_MAX_SIZE+1];
 		bzero(file_name,FILE_NAME_MAX_SIZE+1);
