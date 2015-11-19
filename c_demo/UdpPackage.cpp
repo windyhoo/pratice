@@ -42,6 +42,7 @@ void* receiveThread( void* args ) {
 
 		printf("port:%d\n",ntohs(client_addr.sin_port));
 		printf("address:%s\n",inet_ntoa(client_addr.sin_addr));
+		printf("family:%d\n",client_addr.sin_family);
 
 		char file_name[FILE_NAME_MAX_SIZE+1];
 		bzero(file_name,FILE_NAME_MAX_SIZE+1);
