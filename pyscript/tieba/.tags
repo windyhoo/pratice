@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BeautifulSoup	grap.py	/^from BeautifulSoup import BeautifulSoup$/;"	i
+BeautifulSoup	novel	/^from BeautifulSoup import BeautifulSoup$/;"	i
+DB_PATH	db.py	/^DB_PATH = '\/Users\/windyhoo\/workspace\/pyscript\/tieba\/novel.db'$/;"	v
+DB_PATH	novel	/^DB_PATH = '\/Users\/windyhoo\/workspace\/pyscript\/tieba\/novel.db'$/;"	v
+Tag	novel	/^from BeautifulSoup import Tag$/;"	i
+checkExist	db.py	/^def checkExist(titleName,novelId):$/;"	f
+checkExist	novel	/^def checkExist(titleName,novelId):$/;"	f
+daemonFlag	novel	/^			daemonFlag = True;$/;"	v
+daemonFlag	novel	/^	daemonFlag = False;$/;"	v
+getContent	novel	/^def getContent(contentUrl,titleName,novelId):$/;"	f
+getNovelContent	novel	/^def getNovelContent(novelDtlId):$/;"	f
+getNovelDtlList	novel	/^def getNovelDtlList(novelId,titleCount):$/;"	f
+getNovelList	novel	/^def getNovelList(novelId):$/;"	f
+getUBContent	novel	/^def getUBContent(contentUrl,titleName,novelId):$/;"	f
+getUrlBytitle	novel	/^def getUrlBytitle(url,novelId):$/;"	f
+getopt	novel	/^import getopt$/;"	i
+getopt	test.py	/^import getopt$/;"	i
+grap	grap.py	/^def grap():$/;"	f
+loopcheck	test.py	/^def loopcheck():$/;"	f
+novelDtlId	novel	/^			novelDtlId = value;$/;"	v
+novelDtlId	novel	/^	novelDtlId = 0;$/;"	v
+novelDtlList	novel	/^		novelDtlList = getNovelDtlList(novelId,titleCount);$/;"	v
+novelId	novel	/^			novelId = value;$/;"	v
+novelId	novel	/^	novelId = 0;$/;"	v
+novelIdList	novel	/^	novelIdList = [];$/;"	v
+novel_list	db.sql	/^create table novel_list(id INTEGER PRIMARY KEY,name text,url text);$/;"	t
+novel_list.id	db.sql	/^create table novel_list(id INTEGER PRIMARY KEY,name text,url text);$/;"	F
+novel_list.name	db.sql	/^create table novel_list(id INTEGER PRIMARY KEY,name text,url text);$/;"	F
+novel_list_dtl	db.sql	/^create table novel_list_dtl(dtl_id INTEGER PRIMARY KEY,id int,title_name text,content text,state_date timestamp);$/;"	t
+novel_list_dtl.content	db.sql	/^create table novel_list_dtl(dtl_id INTEGER PRIMARY KEY,id int,title_name text,content text,state_date timestamp);$/;"	F
+novel_list_dtl.dtl_id	db.sql	/^create table novel_list_dtl(dtl_id INTEGER PRIMARY KEY,id int,title_name text,content text,state_date timestamp);$/;"	F
+novel_list_dtl.id	db.sql	/^create table novel_list_dtl(dtl_id INTEGER PRIMARY KEY,id int,title_name text,content text,state_date timestamp);$/;"	F
+novel_list_dtl.state_date	db.sql	/^create table novel_list_dtl(dtl_id INTEGER PRIMARY KEY,id int,title_name text,content text,state_date timestamp);$/;"	F
+novel_list_dtl.title_name	db.sql	/^create table novel_list_dtl(dtl_id INTEGER PRIMARY KEY,id int,title_name text,content text,state_date timestamp);$/;"	F
+novellist	novel	/^		novellist = "gg"$/;"	v
+re	grap.py	/^import re;$/;"	i
+re	novel	/^import re$/;"	i
+re	test.py	/^import re$/;"	i
+showlist	novel	/^			showlist = True;$/;"	v
+showlist	novel	/^	showlist = False;$/;"	v
+socket	novel	/^import socket$/;"	i
+sqlite3	db.py	/^import sqlite3$/;"	i
+sqlite3	novel	/^import sqlite3$/;"	i
+sqlite3	test.py	/^import sqlite3$/;"	i
+sys	novel	/^import sys$/;"	i
+sys	test.py	/^import sys$/;"	i
+test	db.py	/^def test():$/;"	f
+time	novel	/^import time$/;"	i
+time	test.py	/^import time$/;"	i
+timeloop	test.py	/^def timeloop():$/;"	f
+titleCount	novel	/^			titleCount = value;$/;"	v
+titleCount	novel	/^	titleCount = 0;$/;"	v
+updateNovel	novel	/^def updateNovel():$/;"	f
+updateTiebaNovelById	novel	/^def updateTiebaNovelById(url,novelId):$/;"	f
+updateUBNovelById	novel	/^def updateUBNovelById(url,novelId):$/;"	f
+urllib	novel	/^import urllib$/;"	i
+urllib	test.py	/^import urllib$/;"	i
+urllib2	grap.py	/^import urllib2;$/;"	i
