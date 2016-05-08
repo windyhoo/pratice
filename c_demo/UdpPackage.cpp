@@ -80,6 +80,7 @@ int main(int argc,char** argv) {
 		perror("Server Bind Failed:");
 		exit(1);
 	}
+    printf("port:%d\n",ntohs(server_addr.sin_port));
 
 	pthread_t threadId;
 	int ret = pthread_create( &threadId, NULL, receiveThread, &server_socket_fd );
